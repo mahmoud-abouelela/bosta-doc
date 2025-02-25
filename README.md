@@ -38,6 +38,8 @@ Description :
 Description :
   - #### GET: Retrieves details of a single pickup location
       Payload: NO PAYLOAD
+
+
       Response:
 
 
@@ -54,8 +56,7 @@ Description :
           "success": true,
           "message": "pickup location updated successfully.",
           "data": {
-              "isDefault": false
-          }
+              "isDefault": false}
 
   - #### DELETE: Deletes a pickup location (make sure it is not linked with an upcoming pickup)
       Payload: NO PAYLOAD
@@ -66,8 +67,6 @@ Description :
             "message": "pickup location deleted successfully.",
             "data": null
 ### Url: [http://app.bosta.co/api/v2/pickup-locations/{id}/default](http://app.bosta.co/api/v2/pickup-locations/{id}/default)
-Description :   Sets a pickup location to be default
-  - #### PUT: Retrieves details of a single pickup location
+Description :   
+  - #### PUT: Sets a pickup location to be default
     Payload: NO PAYLOAD
-
-### Url: 
