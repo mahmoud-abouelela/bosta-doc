@@ -105,29 +105,63 @@ Description :
 
 	![{42296B9C-87CF-4C7C-88BF-383BC7D71C27}](https://github.com/user-attachments/assets/8a0a6a88-089a-4daf-a183-df54ba410970)
  - #### POST: Creates a new pickup ( contact person is set to location contact info if not specified, repetedDate is by default set to ONE TIME if not sent)
-   try to assign dates which is avalible for pickup 
+   try to assign dates which is avalible for pickup
+
+   
     Payload:
 
-      	 "businessLocationId": "CuxbWTeNwg", --REQUIRED
-		  "scheduledDate": "2025-3-10",     --REQUIRED
-          --OPTIONAL
-          noOfPackages: "no_of_packages",
-          packageType: [Normal, Light Bulky, Heavy Bulky]
-		  "notes": "test",
-		  "contactPerson": {
-		    "name": "Test Name",
-		    "phone": "01001001000",
-		    "email": "test@email.coom"
-		  },
-          "repeatedData": { 
-		    "repeatedType": [One Time, Daily, Weekly],
-		    "days": --MUST BE ARRAY OF VALID DAYS [
-		      "Sunday"
-		    ],
-		    "startDate": "2021-06-10",
-		    "endDate": "2021-10-10"
-		  }
-         }
-### Url:
+	![image](https://github.com/user-attachments/assets/e578e5fe-2e6c-4e67-a85e-96556394647c)
 
+### Url: [http://app.bosta.co/api/v2/pickups/{id}](http://app.bosta.co/api/v2/pickups/{id})
+Description :   
+  - #### GET: 
+    Payload: NO PAYLOAD
+
+
+    Response:
+
+      ![image](https://github.com/user-attachments/assets/fa994970-e7d9-42cc-94a7-46a1f3935751)
+
+- #### PUT: Updates pickup certain feilds
+   Payload:
+
+     ![image](https://github.com/user-attachments/assets/54f60f89-8ed1-4107-bd35-a46de7e52c3b)
+
+  Response:
+
+    ![image](https://github.com/user-attachments/assets/e5830a61-bc25-4c58-8860-a98c2a492f0f)
+
+  
+- #### Delete: Deletes pickup request with its id
+   Payload: NO PAYLOAD
+
+# Order Requests
+  Description:
+  
+### Types of orders 
+     
+   Type |  Code|  Timeline Status |
+   -----|-------| ---------------|
+  Deliver	| 10 | **new:** 10, **pickedup:** 21, **transit:** 30, **out_for_delivery:** 41, **delivered:** 45| 
+  Cash Collection | 15 |  **ready_for_collection:** 11,**out_for_collection:** 40, **collected:** 45|
+  Exchange | 30 | **new:** 10, **pickedup:** 21, **transit:** 30, **out_for_return:** 41, **returned:** 46|
+  Customer Return Pickup | 25 |  **new:** 10, **pickedup:** 23, **transit:** 30, **out_for_exchange:** 41, **out_for_return:** 41, **exchange_returned:** 46|
+  Sign & Return | 35 | **new:** 10, **pickedup:** 21, **transit:** 30, **out_for_signature:** 22, **out_for_return:** 41, **signed_and_returned:** 46|
+
+### Shipping Fees
+  Shipping fees varaies based on pickup location, drop-off, package size additional funds is added if you enable that customer can open the package
+	
+  [https://business.bosta.co/settings/pricing-plan](https://business.bosta.co/settings/pricing-plan)
+  
+### 
+
+### Url: [https://app.bosta.co/api/v2/deliveries](https://app.bosta.co/api/v2/deliveries) 
+
+ - #### POST: 
+    Payload:
+     #### DELIVERY:
+      
+
+    Response: 
+  
  
