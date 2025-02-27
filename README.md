@@ -158,10 +158,64 @@ Description :
 ### Url: [https://app.bosta.co/api/v2/deliveries](https://app.bosta.co/api/v2/deliveries) 
 
  - #### POST: 
-    Payload:
-     #### DELIVERY:
-      
 
-    Response: 
+   #### DELIVERY:
+      Payload:
+
+     ![image](https://github.com/user-attachments/assets/379f4526-13a3-42f9-8eb1-1725b88e820a)
+
+
+     Response:
+
+     ![image](https://github.com/user-attachments/assets/c9f3cdb5-828c-4982-a4fe-7f222174f47a)
   
- 
+   #### Exchange:
+      Payload:
+
+      ![image](https://github.com/user-attachments/assets/ab4a5858-cf49-433e-b80f-a142caa98bc9)
+
+
+     Response:
+
+     ![image](https://github.com/user-attachments/assets/c9f3cdb5-828c-4982-a4fe-7f222174f47a) 
+
+   #### Return:
+	
+      Payload:
+
+      ![image](https://github.com/user-attachments/assets/ec45a6a6-77e5-4569-b739-99f3c421c9c0)
+
+
+     Response:
+   
+      It is expected to be picked up from your customer within 4 days (as shown on the ui)
+
+
+      ![image](https://github.com/user-attachments/assets/82fbd87c-fe6b-4812-b00a-65d3d6b2b563)
+
+   #### Cash Collection:
+      Payload:
+
+
+      Based on the amount of cash to be collected and the location bosta fees will change it is the same from 1 - 2000EGP if the amount increased the fees will increase
+
+      ![image](https://github.com/user-attachments/assets/3dfe3ceb-7a34-48a9-b7b1-79edd40512dc)
+
+
+     Response:
+
+      It is expected to be picked up from your customer within 4 days (as shown on the ui)
+
+
+      ![image](https://github.com/user-attachments/assets/eaf4b14e-97e6-4eee-895e-ae83ddc16ff0)
+
+
+   #### Sign & return:
+      Payload:
+
+      ![image](https://github.com/user-attachments/assets/89ed86b5-ef8f-433f-8296-fbfc29ee8043)
+
+
+     Response:
+		
+     ![image](https://github.com/user-attachments/assets/c9f3cdb5-828c-4982-a4fe-7f222174f47a) 
