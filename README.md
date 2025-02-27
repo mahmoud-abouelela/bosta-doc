@@ -151,8 +151,7 @@ Description :
 ### Shipping Fees
   Shipping fees varaies based on pickup location, drop-off, package size additional funds is added if you enable that customer can open the package
 	
-  [https://business.bosta.co/settings/pricing-plan](https://business.bosta.co/settings/pricing-plan)
-  
+     https://app.bosta.co/api/v2/pricing/shipment/calculator?dropOffCity={CITYNAME_FIRST_LETTER_UPPERCASE}&pickupCity={CITYNAME_FIRST_LETTER_UPPERCASE}&type={[SEND,CASH_COLLECTION,EXCHANGE,CUSTOMER_RETURN_PICKUP,SIGN_AND_RETURN]}&size=[Normal,Light+Bulky,Heavy+Bulky]
 ### 
 
 ### Url: [https://app.bosta.co/api/v2/deliveries](https://app.bosta.co/api/v2/deliveries) 
@@ -218,4 +217,69 @@ Description :
 
      Response:
 		
-     ![image](https://github.com/user-attachments/assets/c9f3cdb5-828c-4982-a4fe-7f222174f47a) 
+     ![image](https://github.com/user-attachments/assets/c9f3cdb5-828c-4982-a4fe-7f222174f47a)
+   
+
+### Url: [http://app.bosta.co/api/v2/deliveries/bulk](http://app.bosta.co/api/v2/deliveries/bulk)
+
+ - #### POST: 
+
+   create bulk orders at once
+
+   Payload:
+
+   ![image](https://github.com/user-attachments/assets/09a62592-745b-4f86-8e75-37c41b4dbb52)
+
+   Response:
+
+	    "success": true,
+	    "data": ["o0ycw4GoQl8lGMackJWIA"]
+
+
+ ### Url: [http://app.bosta.co/api/v2/deliveries/business/{trackingNumber}](http://app.bosta.co/api/v2/deliveries/business/{trackingNumber})
+
+ - #### GET:
+   ![image](https://github.com/user-attachments/assets/f76c85e4-0719-46e6-a5cd-b1b63adfeb3d)
+   ![image](https://github.com/user-attachments/assets/cf4660b2-099f-4175-84e1-83e11310358b)
+
+   
+- #### PUT:
+  you can update an order only in theses states 
+  [10, 11, 20, 21, 22, 24, 30, 41, 47]
+
+
+  Payload:
+
+  
+  ![image](https://github.com/user-attachments/assets/3877378a-3f17-4134-9663-fa37a046e3d6)
+
+  Response:
+
+	   "success": true,
+	    "message": "Done successfully.",
+	    "data": {"_id": "nomSlOdLkVcBLNGV5nhOg"}
+
+
+ - #### DELETE http://app.bosta.co/api/v2/deliveries/business/{trackingNumber}/terminate:
+
+   Response:
+	
+	     "success": true,
+	     "data": {"_id": "79408031"}
+
+
+# Bosta Wallet
+### Url:  [https://app.bosta.co/api/v2/wallet/cycles/cards?start_date=2025-02-26&end_date=2025-02-26](https://app.bosta.co/api/v2/wallet/cycles/cards?start_date=2025-02-26&end_date=2025-02-26)
+Bosta chashout explaination 
+
+Orders amount | cashout days | revenue calc period |
+--------------|--------------|---------------------|
+100						|	Wednesday    | [Saturday - Friday of previous week] |
+100-300				| Monday - Wednesday | [Tuesday - Friday], [Saturday - Monday] |
+301-1000			| Saturday - Tuesday - Thursday | [Wednesday - Friday], [Saturday -Sunday], [Monday - Tuesday] |
+1000+					| Daily except Friday | Daily |
+
+
+- #### GET:
+
+	![image](https://github.com/user-attachments/assets/b439a5f7-94dd-4fca-81fb-93cd6c343f0c)
