@@ -147,7 +147,12 @@ Description :
   Exchange | 30 | **new:** 10, **pickedup:** 21, **transit:** 30, **out_for_return:** 41, **returned:** 46|
   Customer Return Pickup | 25 |  **new:** 10, **pickedup:** 23, **transit:** 30, **out_for_exchange:** 41, **out_for_return:** 41, **exchange_returned:** 46|
   Sign & Return | 35 | **new:** 10, **pickedup:** 21, **transit:** 30, **out_for_signature:** 22, **out_for_return:** 41, **signed_and_returned:** 46|
-
+ 
+Package Type | Example |
+-------------|--------| 
+Normal | Light products, clothes etc  (up to 20 kg) |
+Light Bulky | microwave, fan, carpet, small table |
+Heavy Bulky | AC, washing machine, dinning table |
 ### Shipping Fees
   Shipping fees varaies based on pickup location, drop-off, package size additional funds is added if you enable that customer can open the package
 	
